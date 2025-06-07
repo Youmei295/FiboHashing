@@ -26,9 +26,9 @@ int main()
 	vector<int> randomTU = randomTestUnit(n);
 	vector<int> sequentialTU = sequentialTestUnit(n);
 	vector<int> clusteredTU = clusteredTestUnit(n);
-	HashTable htRandom((int) n/1.5);
-	HashTable htSequential((int)n / 1.5);
-	HashTable htClustered((int)n / 1.5);
+	HashTable htRandom((int) n*1.3);
+	HashTable htSequential((int) n*1.3);
+	HashTable htClustered((int) n*1.3);
 	double timeRandom = measureExecutionTime2(testInsertionModulo, randomTU, htRandom, n);
 	double timeSequential= measureExecutionTime2(testInsertionModulo, sequentialTU, htSequential, n);
 	double timeClustered = measureExecutionTime2(testInsertionModulo, clusteredTU, htClustered, n);
