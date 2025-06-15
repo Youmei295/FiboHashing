@@ -153,4 +153,12 @@ struct HashTable
 			if(!Table[i].empty())counter += (Table[i].size() - 1);
 		return counter;
 	}
+
+	int EmptySlotCounter()
+	{   
+		int counter=0;
+		for (int i = 0; i < size; i++)
+			if (Table[i].empty()) counter++;
+		return counter;
+	}
 };
